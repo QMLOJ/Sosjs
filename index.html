@@ -1,142 +1,57 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <!-- 设置字符集为 UTF-8 -->
-  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
-  <!-- 设置移动设备的视口 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- 引入 Bootstrap 样式表 -->
-  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
-  <!-- 设置页面标题 -->
-  <title>Shorter URL</title>
-  <style>
-    /* 重置默认样式 */
-    * {
-      margin: 0;
-      padding: 0;
-      cursor: default;
-    }
-    /* 设置 html 和 body 的高度为 100% */
-    html, body {
-      height: 100%;
-    }
-    /* 页面主体样式设置 */
-    body {
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      justify-content: center;
-      vertical-align: center;
-      flex-wrap: wrap;
-      align-content: center;
-
-      color: #2a2b2c;
-      background-color: #ebedee;
-      overflow: hidden;
-    }
-    /* 卡片样式设置 */
-    .card {
-      background-color: transparent;
-      width: 768px;
-    }
-    /* 卡片文本样式设置 */
-    .card-text {
-      text-align: center;
-    }
-    /* 链接样式设置 */
-    .card-text > a {
-      text-decoration: none;
-      color: #007bff;
-    }
-    /* 设置链接为手型光标 */
-    .card-text > a {
-      cursor: pointer;
-    }
-    /* 输入框样式设置 */
-    .form-control {
-        cursor: auto;
-    }
-    /* 媒体查询，根据不同屏幕宽度调整卡片宽度 */
-    @media (max-width: 769px) {
-      .card {
-        width: 80%;
-      }
-    }
-    /* 媒体查询，根据不同屏幕宽度调整卡片宽度 */
-    @media (max-width: 420px) {
-      .card {
-        width: 95%;
-      }
-    }
-    /* 暗黑模式样式设置 */
-    @media (prefers-color-scheme: dark) { 
-      body {
-        color: #d9d9d9; 
-        background: #1b1b1b;
-      }
-      .card {
-        background-color: #252d38;
-      }
-    } 
-  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天源服务器</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
+
 <body>
-  <!-- 卡片容器 -->
-  <div class="card">
-    <!-- 卡片标题 -->
-    <h5 class="card-header">🎁 缩短你的URL！</h5>
-    <div class="card-body">
-      <!-- 卡片主体标题 -->
-      <h5 class="card-title">请输入要缩短的长URL：</h5>
-      <!-- 输入框和按钮容器 -->
-      <div class="input-group mb-3">
-        <!-- 长URL输入框 -->
-        <input type="text" class="form-control" placeholder="示例: https://example.com/" id="text">
-        <!-- 缩短按钮 -->
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">缩短</button>
-        </div>
-      </div>    
-      <!-- 卡片文本 -->
-      <div class="card-text">
-        <!-- GitHub 项目链接 -->
-        <a href="https://github.com/xyTom/Url-Shorten-Worker/" target="_self">在GitHub上Fork我</a>
-      </div>
-      <!-- 提示信息容器 -->
-      <p id="notice"></p>             
-    </div>
+  <a class="caidan" href="caidan.php">不要点</a>
+  <div><h1 class="title">天源服务器</h1></div>
+  <br>
+  <div class="line"></div>
+  <p>服务器目前版本为：1.20.12（过两天会升级）</p>
+  <p>目前服务器版本为：2.0.0（不是游戏版本，游戏版本是上面那个）</p>
+  <p>目前官网版本：1.0.0b</p>
+  <p>服务器地址:<a onclick="copyTextToClipboard(ip);">www.tyser-play.bf</a></p>
+  <p>端口：<a onclick="a();">20812</a></p>
+  <p>群号：<a onclick="copyTextToClipboard(qun_hao);">399153472</a></p>
+  <div class="line"></div>
+  <p>请每位玩家遵守以下规则，否则加入黑名单、永久移除群聊</p>
+  <ol>
+    <p class="very_very_big">1.禁止外挂！！！</p>
+    <p>我生平最讨厌在这种服务器里开挂的人<a class="small">和不让我开挂的人</a></p>
+    <p>2.禁止打架（除对方愿意）</p>
+    <p>3.禁止拆除其他玩家的建筑（除对方愿意或特殊情况）</p>
+    <p>4.禁止将商店等公共地区设为自己的领地</p>
+    <p>5.举报违规玩家可获得坤币和专属称号</p>
+  </ol>
+  <div class="line"></div>
+  <p>以下为快速入门指南，可供各位玩家参考</p>
+  <ol>
+    <p>1.可在主城泡经验池获得经验（1秒1级，直到2024年12月31日降为2秒1级））</p>
+    <p>2.主城有免费满级附魔台（如果铁砧报废可找服主）</p>
+    <p>3.可在主城进行抽奖，可以抽到隐藏彩蛋</p>
+    <p>4.可在主城花费10000坤币进行挖坑，很容易就能挖回本，甚至赚的也不少</p>
+    <p>5.可在商店一楼自动回收可买卖物品，如果有不支持的物品可以找服主添加</p>
+    <p>6.商店二楼可以购买物品，里面售卖的知识之书等到下个版本会有大用</p>
+    <p>7.购买的纸币可低头使用，抽奖里的大奖也一样（不是隐藏彩蛋）</p>
+    <p>8.副本boss难度较高（因为血厚功高防高），所以可以带上其他玩家一起，奖励每人跟单独打一样</p>
+    <p>9.可在主城和各种公共地区（包括生存区100格范围内）找到彩蛋</p>
+    <p>10.各种彩蛋可以找服主兑换，可以获得坤币和专属称号</p>
+  </ol>
+  <div class="line"></div>
+  <p>其他</p>
+  <div>
+    <p>1.<a href="tools.html" target="_blank">工具箱</a></p>
+    <p>2.<a onclick="alert(abcd)" href="">尽情期待</a></p>
   </div>
-  <!-- 结果弹窗 -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- 弹窗标题 -->
-          <h5 class="modal-title" id="exampleModalLabel">结果</h5>
-          <!-- 关闭按钮 -->
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <!-- 弹窗主体内容 -->
-        <div class="modal-body" id="result">无结果</div>
-        <!-- 弹窗底部按钮 -->
-        <div class="modal-footer">
-          <!-- 复制按钮 -->
-          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="已复制！">复制</button>
-          <!-- 关闭按钮 -->
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
-        </div>
-      </div>
-    </div>
-  </div>         
-  <!-- 引入 jQuery、Popper.js 和 Bootstrap JavaScript 文件 -->
-  <script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-  <script src="https://gcore.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://gcore.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
-  <!-- 引入 URL 缩短脚本文件 -->
-  <script src="https://qmloj.github.io/Sosjs/main.js" crossorigin="anonymous"></script>
+  <p>可在<a href="fankui.html">此处</a>反馈或向服主私聊</p>
+  <p>服主邮箱：2158370095@qq.com qq号：2158370095</p>
+  <p class="small">最终解释权归服主所有</p>
 </body>
 </html>

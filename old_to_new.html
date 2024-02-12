@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指令转换器v1.0.0</title>
+</head>
+<body>
+    <h1>指令转换器</h1>
+    <h2>版本：1.0.0</h2>
+    <label for="inputFormat1">输入指令:</label>
+    <input id="inputFormat1">
+
+    <button onclick="convertAndDisplay()">Convert</button>
+
+    <h2>结果:</h2>
+    <div id="outputFormat2"></div>
+
+    <script>
+        function convertFormat(input) {
+            const regex = /execute\s+(\S+)\s+(\S+)\s+(.+)/;
+            const match = input.match(regex);
+
+            if (match) {
+                const [, arg1, arg2, arg3] = match;
+                const output = `execute as ${arg1} at ${arg2} run ${arg3}`;
+                return output;
+            } else {
+                return input;
+            }
+        }
+
+        function convertAndDisplay() {
+            const inputElement = document.getElementById('inputFormat1');
+            const outputElement = document.getElementById('outputFormat2');
+
+            const inputFormat1 = inputElement.value;
+            const outputFormat2 = convertFormat(inputFormat1);
+
+            outputElement.textContent = outputFormat2;
+        }
+    </script>
+</body>
+</html>

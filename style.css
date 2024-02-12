@@ -1,0 +1,36 @@
+body {
+    font-size: 15pt;
+    text-align: center;
+    color: #0076FF;
+    background-color: #F9F3F0;
+}
+a{
+  text-align: center;
+  color: #00A2FF;
+}
+.line{
+  height: 1px;
+  width: 100%;
+  background-color: #0076FF;
+}
+button{
+  background-color: white;
+  font-size: 15pt;
+  margin-bottom: -100;
+}
+.very_very_big{
+  font-size: 50pt;
+  color: red;
+}
+.small{
+  font-size: 1px;
+  color: #0076FF;
+}
+.ewm{
+  height: 75%;
+  width: 50%;
+}
+.caidan{
+  font-size: 1.5px;
+  color: #FFFFFF;
+}
